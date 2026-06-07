@@ -1,0 +1,7 @@
+# Ignore compiled binaries and temporary files
+*.o
+*.out
+*.exe
+iomt_device_simulator
+*.log
+__pycache__/
