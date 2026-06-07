@@ -1,66 +1,79 @@
 # CodeAlpha IoMT Research Repository
 
-This repository captures the key findings of the attached IoMT research report and adds an innovative, structured implementation layer for the Internet of Medical Things.
+Welcome to the creative implementation of an Internet of Medical Things research project. This repository blends academic reporting, architecture design, and a practical C-based simulator to make the IoMT vision tangible.
 
 ## What is included
 - `IoMT_Research_Report.pdf` – the original research report on IoMT healthcare monitoring.
-- `docs/` – organized, readable summaries of the report topics:
+- `docs/` – polished report summaries and narrative insights:
   - `report_overview.md`
   - `report_applications.md`
   - `report_benefits_challenges.md`
   - `report_references.md`
-- `src/` – sample C code that simulates an IoMT wearable device generating healthcare readings.
-- `.gitignore` – ignores compiled binaries and temporary build files.
+- `design/` – architecture and innovation notes describing system design choices.
+- `src/` – sample C code that simulates a wearable IoMT device and edge analytics.
+- `Makefile` – build helper for the simulator.
+- `.gitignore` – ignores compiled binaries and temporary files.
+
+## Project vision
+This repository is designed to be:
+- research-friendly: preserves the report's key ideas and structure
+- developer-ready: includes practical code and build instructions
+- innovation-focused: adds a design lens and extension roadmap
+- uniquely expressive: combines technical simulation with healthcare storytelling
 
 ## Repository structure
 - `README.md` – this guide.
-- `docs/` – detailed explanation of report content and real-world IoMT design concepts.
-- `src/` – sample IoMT simulator code in C.
-- `IoMT_Research_Report.pdf` – source report.
+- `docs/` – report summaries and a friendly walkthrough of the IoMT concepts.
+- `design/` – design thinking, architecture, and innovation exploration.
+- `src/` – prototype simulator code for IoMT device behavior.
+- `IoMT_Research_Report.pdf` – source research document.
 
-## Summary of the report
-The report demonstrates how IoMT is revolutionizing healthcare by:
-- enabling continuous patient monitoring
-- improving early detection of health events
-- supporting remote patient care and hospital-at-home solutions
-- reducing costs while improving patient experience
+## What makes this repository innovative
+- creative architecture guidance for future IoMT expansion
+- a simulator that mimics edge-level anomaly detection
+- documentation that turns a research report into a practical system concept
+- a clear division between report knowledge and engineering execution
 
-## Sample IoMT C simulation
-The included C simulation demonstrates a simple wearable IoMT device producing:
-- heart rate
-- body temperature
-- glucose level
-- blood oxygen
-- blood pressure
+## Key report takeaways
+The report explains how IoMT is transforming healthcare by:
+- enabling continuous patient monitoring instead of episodic diagnostics
+- improving early detection of critical health events
+- supporting remote care and "hospital at home" experiences
+- reducing overall costs while enhancing patient comfort and outcomes
 
-The program prints JSON-formatted sensor data and watches for abnormal values, mimicking edge-based medical monitoring.
+## Running the simulator
+Build and run the simulator from the repository root:
 
-## How to run the sample
-1. Open a terminal in the repository root.
-2. Compile the simulator:
+```bash
+make
+cd src
+./iomt_device_simulator --format=json --count=1 --device-id=alpha-001
+```
+
+Or run the default simulator:
 
 ```bash
 cd src
-gcc iomt_device_simulator.c -o iomt_device_simulator
-```
-
-3. Run the simulator:
-
-```bash
 ./iomt_device_simulator
 ```
 
-## Why this repository is unique
-This repository is organized to be both research-oriented and practical:
-- clear, readable documentation derived from the report
-- a concrete C-based prototype for sensor simulation
-- a modern structure that separates report insights from implementation
+## Source code details
+The `src` folder contains:
+- `iomt_data_model.h` — a small sensor data model for IoMT values.
+- `iomt_device_simulator.c` — a simulation of wearable sensor data, JSON output, and local alerts.
 
-## Next steps
-To expand this project, you can add:
-- a network client to send data to a cloud endpoint
-- a data storage module for time-series analytics
-- a companion dashboard for monitoring patient signals in real time
+## How to explore this project
+- Read `docs/report_overview.md` for the report narrative.
+- Read `docs/report_applications.md` for device and clinical use cases.
+- Read `design/iomt_architecture.md` for a system architecture and innovation path.
+- Run the simulator in `src/` to see active IoMT data generation.
+
+## Next steps and extension ideas
+This repository is meant to grow. Possible next steps:
+- add an encrypted network layer for remote telemetry
+- create a dashboard for real-time patient monitoring
+- connect the simulator to a FHIR-compatible health data store
+- add more device classes and smart analytics
 
 ## License
 This repository is provided for educational and demonstration purposes.

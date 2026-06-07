@@ -11,7 +11,8 @@ typedef struct {
 } SensorReading;
 
 void generate_reading(SensorReading *reading, const char *name, float min, float max, const char *unit);
-void print_json_readings(const SensorReading readings[], int count);
+void print_json_readings(const SensorReading readings[], int count, const char *device_id);
+void print_text_readings(const SensorReading readings[], int count, const char *device_id);
 void analyze_readings(const SensorReading readings[], int count);
 
 #endif // IOMT_DATA_MODEL_H
